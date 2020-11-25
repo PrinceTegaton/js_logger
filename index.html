@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Logger</title>
+</head>
+
+<body>
+    <h3>Simple JavaScript Logger</h3>
+
+    <script src="logger.js"></script>
+    <script>
+        window.onload = function () {
+            log('hello world..');
+            log('I have an information', logtype.info);
+            log('But i must warn you', logtype.warn);
+            log('About the errors you have made', logtype.error);
+            log('Well, exceptions are not the end of the world', logtype.exception);
+            log('And that calls for more debugging', logtype.debug);
+
+            var array = [{
+                name: 'James',
+                age: 21,
+                location: 'Nigeria',
+                role: 'Backend'
+            }, {
+                name: 'Mike',
+                age: 19,
+                location: 'Los Angeles',
+                role: 'Frontend'
+            }, {
+                name: 'Parker',
+                age: 26,
+                location: 'London',
+                role: 'Tester'
+            }]
+
+            log(array, logtype.table);
+        }
+    </script>
+</body>
+
+</html>
